@@ -30,6 +30,8 @@ public:
 	int get_minute() { return _minute; };
 	int get_second() { return _second; };
 
+	Date operator=(Date a);
+
 	friend std::ostream& operator<<(ostream& out, Date& t);
 	friend std::istream& operator>>(istream& in, Date& t);
 

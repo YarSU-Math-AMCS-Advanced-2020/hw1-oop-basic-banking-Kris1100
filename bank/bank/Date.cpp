@@ -13,6 +13,17 @@ Date::Date() {
 	set_second(ltm->tm_sec);
 }
 
+Date Date::operator=(Date a)
+{
+	set_day(a.get_day());
+	set_month(a.get_month());
+	set_year(a.get_year());
+	set_hour(a.get_hour());
+	set_minute(a.get_minute());
+	set_second(a.get_second());
+	return *this;
+}
+
 std::ostream& operator<<(ostream& out, Date& t) {
 	cout<< "Date: " << t.get_day() << "." << t.get_month() << "." << t.get_year() << endl;
 	cout << "Time: " << t.get_hour() << ":" << t.get_minute() << ":" << t.get_second() << endl;
