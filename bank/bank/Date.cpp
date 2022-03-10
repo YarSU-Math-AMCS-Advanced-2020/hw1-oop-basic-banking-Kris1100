@@ -15,6 +15,26 @@ Date::Date() {
 
 std::ostream& operator<<(ostream& out, Date& t) {
 	cout<< "Date: " << t.get_day() << "." << t.get_month() << "." << t.get_year() << endl;
-	cout << "Time: " << t.get_hour() << ":" << t.get_minute() << ":" << t.get_second();
+	cout << "Time: " << t.get_hour() << ":" << t.get_minute() << ":" << t.get_second() << endl;
 	return out;
+}
+
+std::istream& operator>>(istream& in, Date& t) {
+	int day, month, year;
+	cout << "¬ведите число: ";
+	cin >> day;
+	cout << endl;
+	cout << "¬ведите мес€ц (от 1 до 12): ";
+	cin >> month;
+	cout << endl;
+	cout << "¬ведите год: ";
+	cin >> year;
+	cout << endl;
+	t.set_day(day);
+	t.set_month(month);
+	t.set_year(year);
+	t.set_hour(10);
+	t.set_minute(0);
+	t.set_second(0);
+	return in;
 }

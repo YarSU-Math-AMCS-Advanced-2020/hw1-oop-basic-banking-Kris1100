@@ -31,5 +31,7 @@ public:
 	int get_second() { return _second; };
 
 	friend std::ostream& operator<<(ostream& out, Date& t);
+	friend std::istream& operator>>(istream& in, Date& t);
+
 };
 
