@@ -11,6 +11,18 @@ Addres::Addres(string country, string region, string locality, string street, st
 	set_flat(flat);
 }
 
+Addres Addres::operator=(Addres a)
+{
+	set_country(a.get_country());
+	set_region(a.get_region());
+	set_locality(a.get_locality());
+	set_street(a.get_street());
+	set_index(a.get_index());
+	set_house(a.get_house());
+	set_flat(a.get_flat());
+	return *this;
+}
+
 std::istream& operator>>(istream& in, Addres& t) {
 	cout << "¬ведите страну: ";
 	string s;
@@ -38,3 +50,4 @@ std::istream& operator>>(istream& in, Addres& t) {
 
 	return in;
 }
+

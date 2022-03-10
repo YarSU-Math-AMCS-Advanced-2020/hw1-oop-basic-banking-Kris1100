@@ -34,8 +34,10 @@ public:
 	int get_house() { return _house; };
 	int get_flat() { return _flat; };
 
+	Addres operator=(Addres a);
 
 	friend std::istream& operator>>(istream& in, Addres& t);
+
 
 };
 
