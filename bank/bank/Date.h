@@ -15,6 +15,7 @@ private:
 	int _second;
 public:
 	Date();
+	Date(int t);
 
 	void set_day(int day) { _day = day; };
 	void set_month(int month) { _month = month; };
