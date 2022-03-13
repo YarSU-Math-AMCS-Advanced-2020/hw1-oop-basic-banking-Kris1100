@@ -1,13 +1,14 @@
 #pragma once
+#include "DebitAccount.h"
+#include "BankAccount.h"
+#include "DebitCard.h"
+#include <iostream>
 #include <vector>
 #include <string>
-#include <iostream>
-#include "BankAccount.h"
-#include "DebitAccount.h"
-#include "DebitCard.h"
+
 
 using namespace std;
-//Теоретически Singleton, но что то я как то не знаю как это сделать
+
 class DataBase
 {
 private:
@@ -17,7 +18,7 @@ private:
 	long long _max_id_card = 1; //Для карты
 	long long _max_id_debit = 1; //Для дебетового счета
 	vector <BankAccount> _base_account;
-	//vector <DebitAccount> _base_debit;
+	vector <DebitAccount> _base_debit;
 	//vector <DebitCard> _base_card;
 
 	DataBase() {};
@@ -43,7 +44,7 @@ public:
 
 
 	void add_account(BankAccount account) { _base_account.push_back(account); };
-	//void add_debit(DebitAccount debit) { _base_debit.push_back(debit); };
+	void add_debit(DebitAccount debit) { _base_debit.push_back(debit); };
 	//void add_card(DebitCard card) { _base_card.push_back(card); };
 
 	void delete_card(long long card_id);
