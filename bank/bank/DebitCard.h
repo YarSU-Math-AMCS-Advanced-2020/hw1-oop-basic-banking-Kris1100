@@ -8,7 +8,7 @@ class DebitCard
 {
 private:
 	string _card_id;
-	string _debit_id; //id счета
+	string _debit_id;
 	int _pay_system;
 	double _limit;
 	Date _validity_period;
