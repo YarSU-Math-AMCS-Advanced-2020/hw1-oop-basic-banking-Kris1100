@@ -44,5 +44,10 @@ std::istream& operator>>(istream& in, PersonalBankAccount& t) {
 	cout << "Введите серию и номер паспорта в виде двенадцатизначного числа: ";
 	cin >> s;
 	t.set_passport(s);
+	DataBase* data_base = DataBase::getInstance();
+	string temp_id = data_base->get_max_id_account();
+	t.set_account_id(temp_id);
+	cout << "Регистрация прошла успешно, Вам присвоен id: " << temp_id << endl;
+	data_base->add_account(t);
 	return in;
 }
