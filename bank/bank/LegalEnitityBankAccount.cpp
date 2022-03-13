@@ -29,5 +29,11 @@ std::istream& operator>>(istream& in, LegalEnitityBankAccount& t) {
 	cout << "Введите TIN: ";
 	cin >> s;
 	t.set_TIN(s);
+	//Если все хорошо присваиваем id
+	DataBase* data_base = DataBase::getInstance();
+	string temp_id = data_base->get_max_id_account();
+	t.set_account_id(temp_id);
+	cout << "Регистрация прошла успешно, Вам присвоен id: " << temp_id << endl;
+	data_base->add_account(t);
 	return in;
 }
