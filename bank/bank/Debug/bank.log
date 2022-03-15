@@ -1,2 +1,10 @@
-﻿  Date.cpp
+﻿  DataBase.cpp
+C:\Users\bobre\PycharmProjects\oop2022\hw1-oop-basic-banking-Kris1100\bank\bank\DataBase.cpp(9,20): warning C4018: <: несоответствие типов со знаком и без знака
+  DebitAccount.cpp
+C:\Users\bobre\PycharmProjects\oop2022\hw1-oop-basic-banking-Kris1100\bank\bank\DebitAccount.cpp(24,21): warning C4018: <: несоответствие типов со знаком и без знака
+  DebitCard.cpp
+  LegalEnitityBankAccount.cpp
+  PersonalBankAccount.cpp
+  Source.cpp
+  Создание кода...
   bank.vcxproj -> C:\Users\bobre\PycharmProjects\oop2022\hw1-oop-basic-banking-Kris1100\bank\Debug\bank.exe

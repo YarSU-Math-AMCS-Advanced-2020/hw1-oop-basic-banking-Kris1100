@@ -13,17 +13,6 @@ Date::Date() {
 	set_second(ltm->tm_sec);
 }
 
-Date::Date(int t) {
-	time_t now = time(0);
-	tm* ltm = localtime(&now);
-
-	set_day(ltm->tm_mday);
-	set_month(1 + ltm->tm_mon);
-	set_year(1900 + ltm->tm_year + 4);
-	set_hour(ltm->tm_hour);
-	set_minute(ltm->tm_min);
-	set_second(ltm->tm_sec);
-}
 
 Date Date::operator=(Date a)
 {
