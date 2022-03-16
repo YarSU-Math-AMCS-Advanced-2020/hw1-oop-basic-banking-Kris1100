@@ -37,6 +37,7 @@ public:
 	Addres operator=(Addres a);
 
 	friend std::istream& operator>>(istream& in, Addres& t);
+	friend std::ostream& operator<<(ostream& out, Addres& t);
 
 
 };
