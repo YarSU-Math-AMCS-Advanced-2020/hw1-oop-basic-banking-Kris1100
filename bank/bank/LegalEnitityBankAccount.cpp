@@ -59,3 +59,18 @@ void LegalEnitityBankAccount::change_TIN() {
 	cin >> temp;
 	this->set_TIN(temp);
 }
+
+std::ostream& operator<<(ostream& out, LegalEnitityBankAccount& t) {
+	cout << "Ваш ID: " << t.get_account_id() << endl;
+	Addres d = t.get_adress();
+	cout << "Ваш адрес: " << endl << d;
+	cout << "Ваш номер телефона: " << t.get_phone_number() << endl;
+	cout << "Название вашей компании: " << t.get_name() << endl;
+	Date temp = t.get_establishing_date();
+	cout << "Дата образования вашей компании: " << endl << temp;
+	cout << "Ваш TIN: " << t.get_TIN() << endl;
+	return out;
+}
+
+
+
