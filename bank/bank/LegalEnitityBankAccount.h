@@ -24,6 +24,11 @@ public:
     void change_establishing_date();
     void change_TIN();
 
+    string get_name() { return _name; };
+    Date get_establishing_date() { return _establishing_date; };
+    string get_TIN() { return _TIN; };
+
+    friend std::ostream& operator<<(ostream& out, LegalEnitityBankAccount& t);
     friend std::istream& operator>>(istream& in, LegalEnitityBankAccount& t);
 };
 
