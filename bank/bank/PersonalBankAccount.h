@@ -33,6 +33,16 @@ public:
     void change_sex();
     void change_passport();
 
+    string get_surname() { return _surname; };
+    string get_name() { return _name; };
+    string get_patronymic() { return _patronymic; };
+    Date get_birth_date() { return _birth_date; };
+    int get_sex() { return _sex; };
+    string get_passport() { return _passport; };
+
+    friend std::ostream& operator<<(ostream& out, PersonalBankAccount& t);
+
+
     friend std::istream& operator>>(istream& in, PersonalBankAccount& t);
 };
 
