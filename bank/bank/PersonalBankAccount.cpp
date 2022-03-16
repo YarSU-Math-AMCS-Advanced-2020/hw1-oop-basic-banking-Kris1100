@@ -51,3 +51,47 @@ std::istream& operator>>(istream& in, PersonalBankAccount& t) {
 	data_base->add_account(t);
 	return in;
 }
+
+void PersonalBankAccount::change_surname() {
+	cout << "¬ведите новую фамилию: ";
+	string temp;
+	cin >> temp;
+	this->set_surname(temp);
+}
+
+void PersonalBankAccount::change_name() {
+	cout << "¬ведите новое им€: ";
+	string temp;
+	cin >> temp;
+	this->set_name(temp);
+}
+
+void PersonalBankAccount::change_patronymic() {
+	cout << "¬ведите новое отчество: ";
+	string temp;
+	cin >> temp;
+	this->set_patronymic(temp);
+}
+
+void PersonalBankAccount::change_birth_date() {
+	cout << "¬ведите новую дату рождени€: ";
+	Date temp;
+	cin >> temp;
+	this->set_birth_date(temp);
+}
+
+void PersonalBankAccount::change_sex() {
+	cout << "¬ведите -1, если вы мужского пола; 1, если вы женского пола; иначе введите 0: ";
+	int temp;
+	cin >> temp;
+	this->set_sex(temp);
+}
+
+void PersonalBankAccount::change_passport() {
+	cout << "¬ведите новые серию и номер паспорта в виде двенадцатизначного числа: ";
+	string temp;
+	cin >> temp;
+	this->set_passport(temp);
+}
+
+
