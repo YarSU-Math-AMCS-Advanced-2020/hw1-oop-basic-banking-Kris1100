@@ -34,6 +34,12 @@ public:
 
 	string id_to_string(long long id);
 
+
+	void set_base_card(vector <DebitCard> base_card) { _base_card = base_card; };
+	void set_base_account(vector <BankAccount> base_account) { _base_account = base_account; };
+	void set_base_debit(vector <DebitAccount> base_debit) { _base_debit = base_debit; };
+
+
 	//будут возвращать строку длины 16, если длина числа меньше, запихиваем в начало нули
 	string get_max_id_account();
 	string get_max_id_debit();
