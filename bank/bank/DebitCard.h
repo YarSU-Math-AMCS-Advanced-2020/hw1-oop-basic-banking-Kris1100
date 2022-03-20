@@ -26,7 +26,7 @@ public:
 	double get_limit() { return _limit; };
 	int get_debit_currency();
 	void rebinding_card();
-
+	void delete_card();
 
 	friend std::istream& operator>>(istream& in, DebitCard& t);
 };
