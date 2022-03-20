@@ -29,19 +29,26 @@ std::istream& operator>>(istream& in, DebitCard& t) {
 	DataBase* data_base = DataBase::getInstance();
 	vector <DebitAccount> base_debit = data_base->get_base_debit();
 	bool is_accept = false;
-
+	
 	while (!is_accept) {
+		bool has_card;
 		for (int i = 0; i < base_debit.size(); i++) {
 			DebitAccount curr = base_debit[i];
 			if (curr.get_debit_id() == s) {
 				is_accept = true;
+				has_card = curr.get_has_card();
 				curr.set_has_card(true);
 			}
 		}
 		if (!is_accept) {
 			cout << "Счета с таким номером не существует, попробуйте еще раз: ";
 		}
+		if (is_accept && has_card) {
+			cout << "К данному счету уже привязана карта, попробуйте еще раз: ";
+			is_accept = false;
+		}
 		if (!is_accept) cin >> s;
+
 	}
 	t.set_debit_id(s);
 	cout << "Выберите платежную систему. \nВведите 0, если хотите выбрать Lisa, 1 - MasterBart, 2 - HoMiR: ";
