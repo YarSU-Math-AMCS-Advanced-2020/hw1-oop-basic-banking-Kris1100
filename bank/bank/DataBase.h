@@ -2,6 +2,8 @@
 #include "DebitAccount.h"
 #include "BankAccount.h"
 #include "DebitCard.h"
+#include "Transaction.h"
+#include "CashTransaction.h"
 #include <iostream>
 #include <vector>
 #include <string>
@@ -20,6 +22,8 @@ private:
 	vector <BankAccount> _base_account;
 	vector <DebitAccount> _base_debit;
 	vector <DebitCard> _base_card;
+	vector <Transaction> _base_transaction;
+	vector <CashTransaction> _base_cash;
 
 	DataBase() {};
 	DataBase& operator=(DataBase&);
@@ -48,15 +52,16 @@ public:
 	vector <BankAccount> get_base_account() { return _base_account; };
 	vector <DebitAccount> get_base_debit() { return _base_debit; };
 	vector <DebitCard> get_base_card() { return _base_card; };
+	vector <Transaction> get_base_transaction() { return _base_transaction; };
+	vector <CashTransaction> get_base_cash() { return _base_cash; };
 
 
 
 	void add_account(BankAccount account) { _base_account.push_back(account); };
 	void add_debit(DebitAccount debit) { _base_debit.push_back(debit); };
 	void add_card(DebitCard card) { _base_card.push_back(card); };
-
-	void delete_card(long long card_id);
-	void delete_debit(long long debit_id);
+	void add_transaction(Transaction transaction) { _base_transaction.push_back(transaction); };
+	void add_cash_transaction(CashTransaction cash_transaction) { _base_cash.push_back(cash_transaction); };
 };
 
 
